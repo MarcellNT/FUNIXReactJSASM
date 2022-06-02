@@ -1,23 +1,36 @@
 import React, { Component } from 'react';
-import './App.css';
-// import component tu thu vien reactstrap
-import { Navbar, NavbarBrand } from 'reactstrap';
-// la mot trong nhung thu vien trong he sinh thai cua react
+import StaffList from './component/StaffListComponent';
+import { STAFFS } from './shared/staffs';
+
+
+//  Tạo riêng Navbar component và sử dung nó trong App Component 
+const Navbar = () => (
+    <nav className='navbar bg-primary '>
+        <div className="container d-flex justify-content-center">
+              <span className='text-white'>
+                  Ứng dụng quản lý nhân viên
+              </span>
+        </div>
+    </nav>
+)
+// khởi tạo state staffs và truyền nó cho children là StaffList component
 class App extends Component {
-// tao ra mot class component App tu Component cua react 
+  constructor(props) {
+    super(props)
+    this.state = {
+      staffs : STAFFS
+    }
+  }
+  // component children StaffList sẽ nhận props là state của App component
   render() {
     return (
-      // bat buoc phai co mot div hoac React.Fragment bao cac phan tu ben trong
-      <div className="App">
-        {/* Navbar va NavbarBrand tuong tu voi navbar, navbarbrand trong bootstrap, su dung ngan gon hon trong bootstrap */}
-        <Navbar dark color="primary">
-          <div className='container'>
-              <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
-          </div>
-        </Navbar>
+      <div className='wrapper'>    
+        <Navbar/>  
+        <StaffList staffs={this.state.staffs}/>
       </div>
-    );
+    )
   }
+
 }
-// phai xuat Component ra thi moi co the import de su dung duoc Component do 
+
 export default App;
