@@ -4,7 +4,7 @@ import dateFormat from "dateformat";
 
 const StaffListCard = ({staffData, onClick, column}) => (
     <div className={column}>
-        <div className="card mt-3 border-warning">
+        <div className="card mt-3 border-success ListStaff">
             <div 
                 className="card-body staff-list "
                 onClick={onClick}
@@ -47,7 +47,7 @@ const ChangeColumn = ({columnData, onClick }) => (
     <div className="d-grid gap-2 d-md-block m-1 mx-auto col-md-2 col-lg-2">
         <button
             onClick = {() => onClick(columnData.class)}
-            className="btn mt-3 btn-warning btn-block"
+            className="btn mt-3 btn-success btn-block"
         >{columnData.name}</button>
 
     </div>
@@ -80,7 +80,8 @@ class StaffList extends Component {
                     <div className="card mt-3 col-12">
                         <div className="row g-0">
                             <div className="col-12 col-md-4 mt-2 mb-2 d-flex justify-content-center">
-                                <img 
+                                <img
+                                    width="100%"
                                     src={staff.image}
                                     alt={staff.name}
                                     className="img-fluid "

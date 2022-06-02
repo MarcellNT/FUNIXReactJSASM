@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import StaffList from './component/StaffListComponent';
 import { STAFFS } from './shared/staffs';
+import './index.css';
 
 
 //  Tạo riêng Navbar component và sử dung nó trong App Component 
 const Navbar = () => (
     <nav className='navbar bg-primary '>
         <div className="container d-flex justify-content-center">
-              <span className='text-white'>
+              <span className='text-white font-weight-bold'>
                   Ứng dụng quản lý nhân viên
               </span>
         </div>
