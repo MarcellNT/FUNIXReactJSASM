@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import StaffList from "./StaffsListComponent";
 import {STAFFS} from "../shared/staffs";
 
 // Tạo class Main Component container
