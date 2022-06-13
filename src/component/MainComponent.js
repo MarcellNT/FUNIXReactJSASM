@@ -1,21 +1,25 @@
 import React, { Component } from "react";
 import StaffList from "./StaffsListComponent";
-import {STAFFS} from "../shared/staffs";
+import Department from "./DepartmentComponent";
+import { STAFFS, DEPARTMENTS } from "../shared/staffs";
+
 
 // Tạo class Main Component container
 class Main extends Component {
+    //  this gọi class Main Component
     constructor(props) {
         super(props)
-        {/* this gọi class Main Component*/}
         this.state = {
-            staffs: STAFFS
+            staffs: STAFFS,
+            departments: DEPARTMENTS
         }
     }
     render() {
-        return(
+        return (
             <div className=" container">
                 {/* gán staffs = this.state.staffs lấy giá trị của nó */}
-                <StaffList staffs={this.state.staffs}/>
+                <StaffList staffs={this.state.staffs} />
+                <Department departments={this.state.departments}/>
             </div>
         )
     }
