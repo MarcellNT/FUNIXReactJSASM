@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import StaffList from "./StaffsListComponent";
 import Department from "./DepartmentComponent";
+import Salary from "./SalaryComponent";
 import { STAFFS, DEPARTMENTS } from "../shared/staffs";
 
 
@@ -20,6 +21,7 @@ class Main extends Component {
                 {/* gán staffs = this.state.staffs lấy giá trị của nó */}
                 <StaffList staffs={this.state.staffs} />
                 <Department departments={this.state.departments}/>
+                <Salary staffs={this.state.staffs} />
             </div>
         )
     }
