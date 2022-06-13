@@ -3,6 +3,7 @@ import StaffList from "./StaffsListComponent";
 import Department from "./DepartmentComponent";
 import Salary from "./SalaryComponent";
 import Footer from "./FooterComponent";
+import Header from "./HeaderComponent";
 import { STAFFS, DEPARTMENTS } from "../shared/staffs";
 
 
@@ -19,6 +20,7 @@ class Main extends Component {
     render() {
         return (
             <div>
+                <Header/>
                 {/* gán staffs = this.state.staffs lấy giá trị của nó */}
                 <StaffList staffs={this.state.staffs} />
                 <Department departments={this.state.departments} />
