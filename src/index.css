@@ -3,13 +3,15 @@ body {
   padding: 0;
 }
 .wrapper {
-  background-color: rgba(0, 0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.1);
+  background-image: url(../public/assets/image/Background.jpg) ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
-button:hover,
-.staff-list:hover {
- 
-  background-color: rgb(31, 167, 103) !important;
+select:hover {
+  background-color: yellow;
+  color: #000;
 }
 .btn-group {
   display: flex;

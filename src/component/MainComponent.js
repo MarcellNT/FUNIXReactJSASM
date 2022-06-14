@@ -6,7 +6,7 @@ import StaffList from "./StaffsListComponent";
 import StaffDetail from "./StaffDetailComponent";
 import Department from "./DepartmentComponent";
 import { STAFFS, DEPARTMENTS } from "../shared/staffs";
-import { Navigate, Route, Routes,useParams} from 'react-router-dom';
+import { Navigate, Route, Routes, useParams } from 'react-router-dom';
 // Trong phiên bản react 17 không support phương thức match nên phải sử dụng sang phương thức userParams
 // Lúc này sử dụng phương thức Number thay vì paresint()
 function StaffWithId({ staffs }) {
@@ -40,10 +40,10 @@ class Main extends Component {
                         path="/staff"
                         element={<StaffList staffs={this.state.staffs} />}
                     />
-                     <Route
+                    <Route
                         path="/staff/:staffId"
                         element={<StaffWithId staffs={this.state.staffs} />}
-                        // staffId so sánh với staff.id 
+                    // staffId so sánh với staff.id 
                     />
                     <Route
                         path="/department"

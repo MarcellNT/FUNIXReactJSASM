@@ -1,5 +1,5 @@
 import React from "react";
-import { Breadcrumb,BreadcrumbItem} from "reactstrap";
+import { Breadcrumb, BreadcrumbItem } from "reactstrap";
 import { Link } from "react-router-dom";
 import dateFormat from "dateformat";
 
@@ -57,10 +57,10 @@ const StaffDetail = (props) => {
             <div className="container">
                 <div className="row">
                     <Breadcrumb>
-                    <BreadcrumbItem>
-                        <Link to="/staff" className="text-decoration-none">Nhân Viên</Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem active>{props.staff.name}</BreadcrumbItem>
+                        <BreadcrumbItem>
+                            <Link to="/staff" className="text-decoration-none">Nhân Viên</Link>
+                        </BreadcrumbItem>
+                        <BreadcrumbItem active>{props.staff.name}</BreadcrumbItem>
                     </Breadcrumb>
                     <div className="col-12">
                         <h3>{props.staff.name}</h3>

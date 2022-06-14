@@ -85,7 +85,7 @@ const StaffList = (props) => {
             <h4 className="mt-2">Nhân Viên</h4>
             <div className="btn-group col-12 ">
                 <select
-                    className="custom-select btn btn-success text-white"
+                    className="custom-select btn btn-success text-white "
                     // 
                     onChange={e => setColumn(e.target.value)}
                 >
