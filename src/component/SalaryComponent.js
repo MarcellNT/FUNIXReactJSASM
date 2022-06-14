@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Breadcrumb, BreadcrumbItem } from "reactstrap";
+import { Link } from "react-router-dom";
 //  gán giá trị vì không nên truyền trực tiếp giá trị fix 
 const basicSalary = 300000;
 const overTimeSalary = 200000;
@@ -37,6 +39,12 @@ const Salary = (props) => {
         })
     return (
         <div className="container">
+                <Breadcrumb>
+                    <BreadcrumbItem>
+                        <Link to="/staff" className="text-decoration-non">Nhân viên</Link>
+                    </BreadcrumbItem>
+                    <BreadcrumbItem active>Salary</BreadcrumbItem>
+                </Breadcrumb>
             <button
                 className="btn btn-success"
                 // Khi click vào thì set lại lương từ cao xuống thấp hoặc ngược lại
