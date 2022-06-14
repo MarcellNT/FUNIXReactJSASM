@@ -1,12 +1,24 @@
 import React, { Component } from "react";
-import StaffList from "./StaffsListComponent";
-import Department from "./DepartmentComponent";
-import Salary from "./SalaryComponent";
-import Footer from "./FooterComponent";
 import Header from "./HeaderComponent";
+import Footer from "./FooterComponent";
+import Salary from "./SalaryComponent";
+import StaffList from "./StaffsListComponent";
+import StaffDetail from "./StaffDetailComponent";
+import Department from "./DepartmentComponent";
 import { STAFFS, DEPARTMENTS } from "../shared/staffs";
-import { Navigate, Route, Routes} from 'react-router-dom';
-
+import { Navigate, Route, Routes,useParams} from 'react-router-dom';
+// Trong phiên bản react 17 không support phương thức match nên phải sử dụng sang phương thức userParams
+// Lúc này sử dụng phương thức Number thay vì paresint()
+function StaffWithId({ staffs }) {
+    // nhận staffs làm props
+    const { staffId } = useParams();
+    return (
+        // khi click vào nhân viên hàm in ra 
+        <StaffDetail
+            staff={staffs.filter((staff) => staff.id === Number(staffId))[0]}
+        />
+    )
+}
 // Tạo class Main Component container
 class Main extends Component {
     //  this gọi class Main Component
@@ -27,6 +39,11 @@ class Main extends Component {
                     <Route
                         path="/staff"
                         element={<StaffList staffs={this.state.staffs} />}
+                    />
+                     <Route
+                        path="/staff/:staffId"
+                        element={<StaffWithId staffs={this.state.staffs} />}
+                        // staffId so sánh với staff.id 
                     />
                     <Route
                         path="/department"

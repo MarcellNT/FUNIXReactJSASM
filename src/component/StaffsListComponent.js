@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 // staff là một object nên khi truyền làm props phải dùng dấu ngoặc nhọn
 const RenderStaffList = ({ staff }) => (
-// dùng arrow function return ngay 
+    // dùng arrow function return ngay 
+    <Link to={`/staff/${staff.id}`}>
         <div className="card border-success mt-3 mb-3 shadow ">
             <img
                 src={staff.image}
@@ -12,7 +14,8 @@ const RenderStaffList = ({ staff }) => (
                 <h5>{staff.name}</h5>
             </div>
         </div>
-   
+    </Link>
+
 )
 // Lưu số cột vào biến cols
 const cols = [
