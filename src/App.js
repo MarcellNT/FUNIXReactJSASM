@@ -1,8 +1,8 @@
 import React from "react";
 import Main from "./component/MainComponent";
 import { BrowserRouter } from "react-router-dom";
-// Su dung BrowserRouter su dung bo dinh tuyen History API cua HTML5 de giu giao dien nguoi dung dong bo voi URL
-// BrowserRouter la thanh phan me luu tru bao tat ca cac thanh phan khac ben trong
+// Sử dụng BrowserRouter sử dụng bộ định tuyết History API của HTML để giữ giao diện người dùng đồng bộ với URL 
+// BrowserRouter là thành phần cha  lưu trữ bao tất cả các thành phần khác bên trong 
 function App() {
   return (
     <BrowserRouter>

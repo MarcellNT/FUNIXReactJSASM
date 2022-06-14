@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
     return (
-        <div className = "footer bg-secondary shadow" >
+        <div className="footer bg-secondary shadow" >
             <div className="container">
                 <div className="row justify-content-center pt-3">
                     <div className="col-12 col-sm-8 ps-5 text-white">
@@ -69,7 +69,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            </div >
+        </div >
     )
 }
 export default Footer;
