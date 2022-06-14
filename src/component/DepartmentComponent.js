@@ -1,4 +1,6 @@
 import React from "react";
+import { Breadcrumb, BreadcrumbItem } from "reactstrap";
+import { Link } from "react-router-dom"
 // departmant trong dấu ngoặc đơn là object
 function RenderDepartment({ department }) {
     return (
@@ -17,6 +19,12 @@ function RenderDepartment({ department }) {
 const Department = (props) => {
     return (
         <div className="container">
+            <Breadcrumb>
+                <BreadcrumbItem>
+                    <Link to="/staff" className="text-decoration-none">Nhân Viên</Link>
+                </BreadcrumbItem>
+                <BreadcrumbItem active>Phòng Ban</BreadcrumbItem>
+            </Breadcrumb>
             <h4 className="mt-2">Phòng Ban</h4>
             <div className="row shadow mt-5 mb-5">
                 {props.departments.map((department) => (
