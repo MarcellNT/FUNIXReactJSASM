@@ -5,8 +5,7 @@ import Salary from "./SalaryComponent";
 import Footer from "./FooterComponent";
 import Header from "./HeaderComponent";
 import { STAFFS, DEPARTMENTS } from "../shared/staffs";
-import { Navigate, Route, Routes, useParams } from 'react-router-dom';
-
+import { Navigate, Route, Routes} from 'react-router-dom';
 
 // Tạo class Main Component container
 class Main extends Component {

@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-//  gán giá trị vì không nên truyền trực tiếp giá trị fix trực tiếp 
+import React, { useState } from "react";
+//  gán giá trị vì không nên truyền trực tiếp giá trị fix 
 const basicSalary = 300000;
 const overTimeSalary = 200000;
 // salary là object nên khi truyền props sẽ ở trong dấu ngoặc vuông

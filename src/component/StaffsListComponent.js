@@ -1,5 +1,4 @@
 import React, { useState } from "react";
- 
 // staff là một object nên khi truyền làm props phải dùng dấu ngoặc nhọn
 const RenderStaffList = ({ staff }) => (
 // dùng arrow function return ngay 
