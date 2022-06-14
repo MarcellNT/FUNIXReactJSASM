@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // staff là một object nên khi truyền làm props phải dùng dấu ngoặc nhọn
 const RenderStaffList = ({ staff }) => (
     // dùng arrow function return ngay 
-    <Link to={`/staff/${staff.id}`}>
+    <Link to={`/staff/${staff.id}`} className="text-center text-decoration-none">
         <div className="card border-success mt-3 mb-3 shadow ">
             <img
                 src={staff.image}
@@ -83,9 +83,9 @@ const StaffList = (props) => {
     return (
         <div className="container">
             <h4 className="mt-2">Nhân Viên</h4>
-            <div className="btn-group col-12">
+            <div className="btn-group col-12 ">
                 <select
-                    className="custom-select btn btn-success border text-white"
+                    className="custom-select btn btn-success text-white"
                     // 
                     onChange={e => setColumn(e.target.value)}
                 >
@@ -93,7 +93,7 @@ const StaffList = (props) => {
                     {changeColumn}
                 </select>
                 <button
-                    className="btn btn-success border"
+                    className="btn btn-success border "
                     onClick={() => setSortId(!sortId)}
                 >
                     Sắp xếp nhân viên theo ID

@@ -2,3 +2,20 @@ body {
   margin: 0;
   padding: 0;
 }
+.wrapper {
+  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+button:hover,
+.staff-list:hover {
+ 
+  background-color: rgb(31, 167, 103) !important;
+}
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+*::-webkit-input-placeholder {
+   color: rgb(255, 255, 255);
+}
