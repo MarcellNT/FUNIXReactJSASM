@@ -1,0 +1,47 @@
+ Bài Assigment 2 - Môn ReactJS - Tungnd - 15445
+
+Link repository: https://github.com/MarcellNT/FUNIXReactJSASM
+Tên branch: RJS101x_Assignment02_tungndfx15445@funix.edu.vn
+
+Yêu cầu cơ bản (bắt buộc làm và chiếm 70% tổng điểm bài Assignment)
+1. 	
+Commit code lên Github thành công, 
+chia được thành branch riêng cho ASM2.
+Yêu cầu tối thiểu 10 commit trong ít nhất 2 ngày khác nhau.
+==> Yes
+2.
+Tạo được báo cáo sản phầm mẫu
+   1. Cung cấp tổng quan ngắn gọn về dự án và danh sách các tính năng.
+   2. Có tất cả thiết kế giao diện người dùng của các màn hình được liệt kê và các màn hình sẽ làm cho phần nâng cao (nếu có).
+   3. Chứa thông tin về cấu trúc điều hướng. 
+==> Yes
+3.
+Tạo được Router để chuyển qua lại giữa các màn hình.
+==> Yes
+4.
+Màn hình danh sách nhân viên, được hiển thị sau khi mở trang chủ 
+hoặc bấm vào mục “Nhân viên” ở menu như mô tả. 
+Có sử dụng functional component trong màn hình.
+==> Yes
+5.
+Sau khi bấm vào ảnh của nhân viên ở danh sách nhân viên, màn hình 
+được chuyển sang trang thông tin của nhân viên như mô tả.
+==> Yes
+6. 
++ Màn hình danh sách các phòng ban được hiển thị sau khi bấm 
+vào mục “Phòng ban” ở menu.
++ Phân tách ra Presentational Component, Container Component 
+trong code.
+==> Yes
+7. 
+Màn hình bảng lương của toàn bộ nhân viên trong công ty sau khi 
+bấm vào “Bảng lương” ở Menu.
+==> Yes
+Yêu cầu nâng cao (chiếm 30% tổng điểm bài Assignment)
+- Cải thiện giao diện đẹp hơn. ==> Yes
+- Thêm các chức năng để hoàn thiện như: tìm kiếm nhân viên, 
+sắp xếp theo thuộc tính. ==> Yes
+- Ở màn hình bảng lương cho phép sắp xếp theo mã nhân viên 
+hoặc theo mức lương ...  ==> Yes (theo mức lương)
+
+
