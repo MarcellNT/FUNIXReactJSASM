@@ -13,7 +13,6 @@ function StaffWithId({ staffs }) {
     // nhận staffs làm props
     const { staffId } = useParams();
     return (
-        // khi click vào nhân viên hàm in ra 
         <StaffDetail
             staff={staffs.filter((staff) => staff.id === Number(staffId))[0]}
         />

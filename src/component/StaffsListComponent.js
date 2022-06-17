@@ -96,7 +96,7 @@ const StaffList = (props) => {
                     className="btn btn-success border "
                     onClick={() => setSortId(!sortId)}
                 >
-                    Sắp xếp nhân viên theo ID
+                    Sắp xếp nhân viên theo tên
                 </button>
                 <input
                     className="btn btn-success border text-white"

@@ -41,9 +41,9 @@ const Salary = (props) => {
         <div className="container">
             <Breadcrumb>
                 <BreadcrumbItem>
-                    <Link to="/staff" className="text-decoration-non">Nhân viên</Link>
+                    <Link to="/staff" className="text-decoration-none">Nhân viên</Link>
                 </BreadcrumbItem>
-                <BreadcrumbItem active>Salary</BreadcrumbItem>
+                <BreadcrumbItem active>Lương</BreadcrumbItem>
             </Breadcrumb>
             <button
                 className="btn btn-success"
