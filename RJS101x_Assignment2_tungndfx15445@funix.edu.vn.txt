@@ -12,6 +12,21 @@ Yêu cầu tối thiểu 10 commit trong ít nhất 2 ngày khác nhau.
 2.
 Tạo được báo cáo sản phầm mẫu
    1. Cung cấp tổng quan ngắn gọn về dự án và danh sách các tính năng.
+	+ Hiển thị màn hình danh sách nhân viên gồm ảnh nhân viên tên nhân viên, căn chỉnh nhân viên ra giữa
+	+ Hiển thị Header và footer 
+	+ Sử dungg thẻ link để khi bấm vào ảnh nhân viên sẽ chuyển sang tên nhân viên bao gồm:  
+	- Họ và tên nhân viên
+	- Ngày sinh 	
+	- Ngày vào công ty 
+	- Phòng ban
+	- Số ngày nghỉ còn lại
+	- Số ngày làm thêm
+	+ Khi bấm vào phòng ban trên Navbar sẽ hiển thị danh sách các phòng ban và số lượng nhân viên
+	+ Hiển thị màn hình danh sách chi tiết lương của toàn bộ nhân viên trong công ty sau khi bấm vào Bảng Lương ở menu:
+	- Tên nhân viên
+	- Mã nhân viên
+	- Số ngày làm thêm
+	- Lương
    2. Có tất cả thiết kế giao diện người dùng của các màn hình được liệt kê và các màn hình sẽ làm cho phần nâng cao (nếu có).
    3. Chứa thông tin về cấu trúc điều hướng. 
 ==> Yes
