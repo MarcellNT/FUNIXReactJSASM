@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(/assets/image/Background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important
+}
+.label-text {
+    font-weight: bold;
+}
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.add-staff {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;    
+}
