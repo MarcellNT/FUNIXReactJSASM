@@ -4,6 +4,7 @@ import { Breadcrumb, BreadcrumbItem } from "reactstrap";
 import { Loading } from "./LoadingComponent";
 import { RenderStaffItem } from "./StaffListComponent";
 class DeptStaffList extends Component {
+    //When component was mounted, call fetchDeptStaffs()
     componentDidMount() {
         this.props.fetchDeptStaffs(this.props.deptId);
     }

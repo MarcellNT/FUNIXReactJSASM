@@ -16,6 +16,7 @@ function RenderDepartmentItem({ department }) {
     );
 }
 class DepartmentList extends Component {
+    //When component was mounted, call fetchDepartment()
     componentDidMount() {
         this.props.fetchDepartments();
     }

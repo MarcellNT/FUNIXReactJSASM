@@ -16,7 +16,7 @@ import {
     fetchSalary
 } from "../redux/actions/ActionCreators";
 
-
+// map state and dispatch to props and save them
 const mapStateToProps = (state) => ({
     staffs: state.staffs,
     departments: state.departments,
@@ -38,12 +38,14 @@ const mapDispatchToProps = (dispatch) => ({
         dispatch(fetchDeptStaffs(deptId));
     }
 });
+
+//When component mouted, call fetch function
 class Main extends Component {
     componentDidMount() {
         this.props.fetchStaffs();
         this.props.fetchDepartments();
     }
-
+    //Render Staff List with Search Key
     render() {
         const SearchStaffList = ({ match }) => {
             //  đặt biến 

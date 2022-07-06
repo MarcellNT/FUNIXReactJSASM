@@ -10,6 +10,7 @@ import { FadeTransform } from 'react-animation-components';
 import { Loading } from "./LoadingComponent";
 
 function RenderStaff({ staff, departments }) {
+    //For render department name when add new staff
     let departmentStaff = "";
     departments.forEach((department) => {
         if (staff.departmentId === department.id) {
