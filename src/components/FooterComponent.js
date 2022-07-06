@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer(props) {
   return (
-    <div className="footer bg-warning">
+    <div className="footer">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-4 offset-1 col-sm-2">
@@ -23,10 +23,10 @@ function Footer(props) {
           <div className="col-7 col-sm-5">
             <h5>Our Address</h5>
             <address>
-              489 Hoàng Quốc Việt, Hà Nội <br />
-              <i className="fa fa-phone fa-lg"></i>: +1234 5678
+              189 Hoàng Hoa Thám, Hà Nội <br />
+              <i className="fa fa-phone fa-lg"></i>: +1234 9876
               <br />
-              <i className="fa fa-fax fa-lg"></i>: +8765 4321
+              <i className="fa fa-fax fa-lg"></i>: +5432 4321
               <br />
               <i className="fa fa-envelope fa-lg"></i>:{" "}
               <a href="mailto:info@hrma.vn">info@hrma.vn</a>
@@ -45,7 +45,7 @@ function Footer(props) {
               <span className="p-1">
                 <a
                   className="btn btn-social-icon btn-facebook"
-                  href="http://www.facebook.com/profile.php?id="
+                  href="https://www.facebook.com/AMDVN"
                 >
                   <i className="fa fa-facebook"></i>
                 </a>

@@ -20,7 +20,7 @@ import { Loading } from "./LoadingComponent";
 function RenderSalaryItem({ staff, basicSalary, overTimeSalary }) {
   return (
     <Card>
-      <CardHeader className="text-center bg-warning">
+      <CardHeader className="text-center bg-muted">
         <Link to={`/staffs/${staff.id}`}>
           <CardTitle tag="h4">{staff.name}</CardTitle>
         </Link>
@@ -30,7 +30,7 @@ function RenderSalaryItem({ staff, basicSalary, overTimeSalary }) {
         <CardText>Hệ số lương: {staff.salaryScale}</CardText>
         <CardText>Số giờ làm thêm: {staff.overTime}</CardText>
       </CardBody>
-      <CardFooter className="text-center">
+      <CardFooter className="text-center text-white bg-success">
         {/* toLocaleString('vi-VN') to add . to number */}
         <CardTitle>
           Lương:{" "}
@@ -95,7 +95,7 @@ class SalaryList extends Component {
         break;
       }
 
-      //Sort salaryScale from a-z
+      //Sort salaryScale from z-a
       case "StaffSalaryReverse": {
         staffs.sort((staff1, staff2) => {
           let staffSalary1 =

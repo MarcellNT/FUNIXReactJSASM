@@ -148,15 +148,15 @@ class StaffList extends Component {
               </div>
               {/*  Button Add New*/}
               <div className="col-auto mr-lg-5">
-                <Button onClick={this.toggleModal} color="primary">
-                  <span className="fa fa-plus-square"></span> Add New
+                <Button onClick={this.toggleModal} color="success">
+                  <span className="fa fa-plus-square"></span> Thêm
                 </Button>
               </div>
               {/*  Modal Add New Staff */}
               <Modal isOpen={this.state.isOpenModal} toggle={this.toggleModal}>
                 <ModalHeader
                   toggle={this.toggleModal}
-                  className="bg-primary text-white"
+                  className="bg-success text-white"
                 >
                   Thêm Nhân viên mới
                 </ModalHeader>
@@ -183,7 +183,7 @@ class StaffList extends Component {
                   />
                 </Col>
                 <Col xs="auto">
-                  <Button type="submit" value="submit" color="primary">
+                  <Button type="submit" value="submit" color="success">
                     <span className="fa fa-search"></span> Search
                   </Button>
                 </Col>

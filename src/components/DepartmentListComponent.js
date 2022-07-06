@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { Card, CardBody, CardTitle, CardText } from "reactstrap";
 import { Loading } from "./LoadingComponent";
 
-// Express function to render name and number of staffs in Department
+// tạo Express function để render name và number of staffs trong Department
 function RenderDepartmentItem({ department }) {
   return (
-    <Card className="border-warning shadow">
+    <Card className="border-success shadow">
       <Link to={`/departments/${department.id}`}>
         <CardBody>
           <CardTitle>{department.name}</CardTitle>
@@ -18,7 +18,7 @@ function RenderDepartmentItem({ department }) {
 }
 
 class DepartmentList extends Component {
-  //When component was mounted, call fetchDepartment()
+  //Khi component đã mounted, gọi fetchDepartment()
   componentDidMount() {
     this.props.fetchDepartments();
   }

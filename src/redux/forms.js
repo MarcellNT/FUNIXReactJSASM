@@ -1,9 +1,10 @@
 export const InitialNewStaff = {
-  name: "",
-  doB: "",
-  salaryScale: 1,
-  startDate: "",
-  annualLeave: 0,
-  overTime: 0,
-  image: "/assets/images/staffAdded.png",
-};
+    name: "",
+    doB: "",
+    salaryScale: 1,
+    startDate: "",
+    annualLeave: 0,
+    overTime: 0,
+    image: "/assets/images/staffAdded.png",
+  };
+  

@@ -11,7 +11,6 @@ import {
   deleteStaff,
   postNewStaff,
 } from "../redux/actions/ActionCreators";
-
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import StaffList, { RenderStaffItem } from "./StaffListComponent";
@@ -19,6 +18,7 @@ import StaffDetail from "./StaffDetailComponent";
 import DepartmentList from "./DepartmentListComponent";
 import DeptStaffList from "./DeptStaffList";
 import SalaryList from "./SalaryComponent";
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 // map state and dispatch to props and save them
 const mapStateToProps = (state) => ({
@@ -111,80 +111,84 @@ class Main extends Component {
     return (
       <div>
         <Header />
-        <Switch>
-          <Route
-            exact
-            path="/staffs"
-            render={() => (
-              <StaffList
-                staffs={this.props.staffs.staffs}
-                staffsLoading={this.props.staffs.isLoading}
-                staffsErrMess={this.props.staffs.errMess}
-                departments={this.props.departments.departments}
-                resetAddStaffForm={this.props.resetAddStaffForm}
-                postNewStaff={this.props.postNewStaff}
+        <TransitionGroup>
+          <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
+            <Switch>
+              <Route
+                exact
+                path="/staffs"
+                render={() => (
+                  <StaffList
+                    staffs={this.props.staffs.staffs}
+                    staffsLoading={this.props.staffs.isLoading}
+                    staffsErrMess={this.props.staffs.errMess}
+                    departments={this.props.departments.departments}
+                    resetAddStaffForm={this.props.resetAddStaffForm}
+                    postNewStaff={this.props.postNewStaff}
+                  />
+                )}
               />
-            )}
-          />
-          <Route
-            path="/staffs/:staffId"
-            render={({ match }) => {
-              return (
-                <StaffDetail
-                  staff={
-                    this.props.staffs.staffs.filter(
-                      (staff) => staff.id === parseInt(match.params.staffId, 10)
-                    )[0]
-                  }
-                  departments={this.props.departments.departments}
-                  patchUpdateStaff={this.props.patchUpdateStaff}
-                  deleteStaff={this.props.deleteStaff}
-                />
-              );
-            }}
-          />
-          <Route path="/search/:staffName" component={SearchStaffList} />
-          <Route
-            exact
-            path="/departments"
-            render={() => (
-              <DepartmentList
-                departments={this.props.departments.departments}
-                departmentsLoading={this.props.departments.isLoading}
-                departmentsErrMess={this.props.departments.errMess}
-                fetchDepartments={this.props.fetchDepartments}
+              <Route
+                path="/staffs/:staffId"
+                render={({ match }) => {
+                  return (
+                    <StaffDetail
+                      staff={
+                        this.props.staffs.staffs.filter(
+                          (staff) => staff.id === parseInt(match.params.staffId, 10)
+                        )[0]
+                      }
+                      departments={this.props.departments.departments}
+                      patchUpdateStaff={this.props.patchUpdateStaff}
+                      deleteStaff={this.props.deleteStaff}
+                    />
+                  );
+                }}
               />
-            )}
-          />
-          <Route
-            path="/departments/:deptId"
-            render={({ match }) => (
-              <DeptStaffList
-                deptId={match.params.deptId}
-                fetchDeptStaffs={this.props.fetchDeptStaffs}
-                staffs={this.props.deptStaffs.deptStaffs}
-                staffsLoading={this.props.deptStaffs.isLoading}
-                staffsErrMess={this.props.deptStaffs.errMess}
-                departments={this.props.departments.departments}
-                postNewStaff={this.props.postNewStaff}
-                resetAddStaffForm={this.props.resetAddStaffForm}
+              <Route path="/search/:staffName" component={SearchStaffList} />
+              <Route
+                exact
+                path="/departments"
+                render={() => (
+                  <DepartmentList
+                    departments={this.props.departments.departments}
+                    departmentsLoading={this.props.departments.isLoading}
+                    departmentsErrMess={this.props.departments.errMess}
+                    fetchDepartments={this.props.fetchDepartments}
+                  />
+                )}
               />
-            )}
-          />
-          <Route
-            exact
-            path="/salary"
-            render={() => (
-              <SalaryList
-                fetchSalary={this.props.fetchSalary}
-                staffs={this.props.salary.salary}
-                salaryLoading={this.props.salary.isLoading}
-                salaryErrMess={this.props.salary.errMess}
+              <Route
+                path="/departments/:deptId"
+                render={({ match }) => (
+                  <DeptStaffList
+                    deptId={match.params.deptId}
+                    fetchDeptStaffs={this.props.fetchDeptStaffs}
+                    staffs={this.props.deptStaffs.deptStaffs}
+                    staffsLoading={this.props.deptStaffs.isLoading}
+                    staffsErrMess={this.props.deptStaffs.errMess}
+                    departments={this.props.departments.departments}
+                    postNewStaff={this.props.postNewStaff}
+                    resetAddStaffForm={this.props.resetAddStaffForm}
+                  />
+                )}
               />
-            )}
-          />
-          <Redirect to="/staffs" />
-        </Switch>
+              <Route
+                exact
+                path="/salary"
+                render={() => (
+                  <SalaryList
+                    fetchSalary={this.props.fetchSalary}
+                    staffs={this.props.salary.salary}
+                    salaryLoading={this.props.salary.isLoading}
+                    salaryErrMess={this.props.salary.errMess}
+                  />
+                )}
+              />
+              <Redirect to="/staffs" />
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
         <Footer />
       </div>
     );
